@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Lecture 4 — File Paths, Boilerplate, DIV, Class, ID</title>
+</head>
+<body>
+  <header>
+    <h1>LECTURE 4</h1>
+    <nav>
+      <a href="index.html">Home</a> |
+      <a href="lecture2.html">Lecture 2</a> |
+      <a href="lecture3.html">Lecture 3</a> |
+      <a href="lecture4.html">Lecture 4</a>
+      <a href="lecture5.html">Lecture 5</a>
+      <a href="lecture6.html">Lecture 6</a>
+    </nav>
+    <hr>
+  </header>
+
+  <main>
+    <h1>TOPIC: File Path in HTML | BoilerPlate Code | DIV, Class, ID</h1>
+
+    <h2>HTML Boilerplate Code</h2>
+    <p>This is the basic starting structure of every HTML page.</p>
+ 
+
+  <section>
+    <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Hello World&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    </pre>
+  </section>
+  <hr>
+
+  
+  <section>
+    <h1>File Path in HTML</h1>
+    <p>File paths tell the browser where to find files (images, videos, links).</p>
+
+    <h3>1. Same Folder</h3>
+    <p>Image is in the same folder as HTML file:</p>
+    <pre>&lt;img src="image.jpg" alt="Sample"&gt;</pre>
+
+    <h3>2. Subfolder</h3>
+    <p>Image inside an <b>images</b> folder:</p>
+    <pre>&lt;img src="images/photo.png" alt="Photo"&gt;</pre>
+
+    <h3>3. Parent Folder</h3>
+    <p>Image is one folder back (.. means parent directory):</p>
+    <pre>&lt;img src="../photo.png" alt="Parent Photo"&gt;</pre>
+
+    <h3>4. Absolute Path</h3>
+    <p>Full web address:</p>
+    <pre>&lt;img src="https://example.com/logo.png" alt="Logo"&gt;</pre>
+  </section>
+  <hr>
+
+  
+  <section>
+    <h1>DIV, Class, and ID</h1>
+
+    <h3>DIV Element</h3>
+    <p>DIV groups content into sections (no style by default).</p>
+    <div>
+      <h4>This is inside a DIV</h4>
+      <p>DIV helps organize the layout.</p>
+    </div>
+
+    <h3>Class Attribute</h3>
+    <p>Class can be used many times (for grouping elements).</p>
+    <div class="note">
+      <p>This DIV has class="note".</p>
+    </div>
+    <div class="note">
+      <p>Another DIV with the same class.</p>
+    </div>
+
+    <h3>ID Attribute</h3>
+    <p>ID must be unique (for a single element).</p>
+    <div id="uniqueBox">
+      <p>This DIV has id="uniqueBox".</p>
+    </div>
+  </section>
+
+  <footer>
+    <hr>
+    <p>Contact: <a href="www.linkedin.com/in/mustkim-siddiqui">LinkedIn</a></p>
+    <p>Copyright © all rights reserved — Developer ( Mustkim Siddiqui )</p>
+  </footer>
+</body>
+</html>

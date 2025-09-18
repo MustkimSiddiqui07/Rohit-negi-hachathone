@@ -1,0 +1,117 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Lecture 6 — Media, Multi Page Website, Deploy</title>
+</head>
+<body>
+  <header>
+    <h1>LECTURE 6</h1>
+    <nav>
+      <a href="index.html">Home</a> |
+      <a href="lecture2.html">Lecture 2</a> |
+      <a href="lecture3.html">Lecture 3</a> |
+      <a href="lecture4.html">Lecture 4</a> |
+      <a href="lecture5.html">Lecture 5</a>
+      <a href="lecture6.html">Lecture 6</a>
+    </nav>
+    <hr>
+  </header>
+
+  <main>
+    
+    <h1>HTML Topics: Media Tag | Multi Page Website | Deploy Your Project</h1>
+  <hr>
+
+  <!-- Part 1: Media Tags -->
+  <h2>1. Media Tags in HTML</h2>
+  <p>Media tags are used to add images, audio, video, and external content.</p>
+
+  <h3>Image Example:</h3>
+  <pre>&lt;img src="photo.jpg" alt="Sample Photo" width="300"&gt;</pre>
+  <img src="media/photo.jpg" alt="Sample Photo" width="200">
+
+  <h3>Audio Example:</h3>
+  <pre>
+&lt;audio controls&gt;
+  &lt;source src="song.mp3" type="audio/mpeg"&gt;
+&lt;/audio&gt;
+  </pre>
+  <audio controls>
+    <source src="media/song.mp3" type="audio/mpeg">
+  </audio>
+
+  <h3>Video Example:</h3>
+  <pre>
+&lt;video width="300" controls&gt;
+  &lt;source src="video.mp4" type="video/mp4"&gt;
+&lt;/video&gt;
+  </pre>
+  <video width="300" controls>
+    <source src="media/video.mp4" type="video/mp4">
+  </video>
+
+  <h3>Iframe Example:</h3>
+  <pre>&lt;iframe src="https://www.wikipedia.org" width="400" height="200"&gt;&lt;/iframe&gt;</pre>
+  <iframe src="https://www.wikipedia.org" width="400" height="200"></iframe>
+
+  <hr>
+
+  <!-- Part 2: Multi Page Website -->
+  <h2>2. Multi Page Website</h2>
+  <p>A multi-page website is made of different HTML files like <b>index.html</b>, <b>about.html</b>, <b>gallery.html</b>, <b>contact.html</b>. 
+     These pages are linked using the <code>&lt;a&gt;</code> tag.</p>
+
+  <h3>Navigation Example:</h3>
+  <pre>
+&lt;a href="index.html"&gt;Home&lt;/a&gt; |
+&lt;a href="about.html"&gt;About&lt;/a&gt; |
+&lt;a href="gallery.html"&gt;Gallery&lt;/a&gt; |
+&lt;a href="contact.html"&gt;Contact&lt;/a&gt;
+  </pre>
+
+  <p>So when you click a link, it opens another HTML file.  
+  Example below shows working navigation:</p>
+
+  <a href="index.html">Home</a> |
+  <a href="lecture2.html">lecture2</a> |
+  <a href="lecture3.html">lecture3</a> |
+  <a href="lecture4.html">lecture4</a>
+
+  <hr>
+
+  <!-- Part 3: Deploy Project -->
+  <h2>3. Deploy Your Project</h2>
+  <p>Deployment means putting your project online so anyone can see it.</p>
+
+  <h3>Method 1: GitHub Pages</h3>
+  <ol>
+    <li>Create a GitHub account and repository.</li>
+    <li>Upload all your HTML files.</li>
+    <li>Go to <b>Settings → Pages</b> → select branch.</li>
+    <li>Your site will be live at <code>https://username.github.io/repository-name/</code></li>
+  </ol>
+
+  <h3>Method 2: Netlify</h3>
+  <ol>
+    <li>Go to <a href="https://www.netlify.com">Netlify</a>.</li>
+    <li>Sign up and log in.</li>
+    <li>Drag & Drop your project folder into Netlify dashboard.</li>
+    <li>It gives you a live link like <code>https://myproject.netlify.app</code></li>
+  </ol>
+
+  <hr>
+  <h2>Summary</h2>
+  <ul>
+    <li><b>Media Tags</b> → Add images, audio, video, iframe.</li>
+    <li><b>Multi Page Website</b> → Multiple HTML files linked with <code>&lt;a&gt;</code>.</li>
+    <li><b>Deploy Project</b> → Upload to GitHub Pages or Netlify to make it live.</li>
+  </ul>
+  <footer>
+    <hr>
+    <p>Contact: <a href="www.linkedin.com/in/mustkim-siddiqui">LinkedIn</a></p>
+    <p>Copyright © all rights reserved — Developer ( Mustkim Siddiqui )</p>
+  </footer>
+</body>
+</html>
+

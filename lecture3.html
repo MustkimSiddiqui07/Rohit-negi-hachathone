@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Lecture 3 — Nested Lists & Tables</title>
+</head>
+<body>
+  <header>
+    <h1>LECTURE 3</h1>
+    <nav>
+      <a href="index.html">Home</a> |
+      <a href="lecture2.html">Lecture 2</a> |
+      <a href="lecture3.html">Lecture 3</a> |
+      <a href="lecture4.html">Lecture 4</a>
+      <a href="lecture5.html">Lecture 5</a>
+      <a href="lecture6.html">Lecture 6</a>
+    </nav>
+    <hr>
+  </header>
+
+  <h1>Nested Lists & Tables — Complete Guide</h1>
+    <p>Examples and explanations of HTML lists and tables. (No CSS used.)</p>
+    <hr>
+ 
+
+  <main>
+    
+    <section>
+      <h2>1. Nested Lists</h2>
+
+      <h3>1.1 Unordered List (nested)</h3>
+      <p>An unordered list can contain another &lt;ul&gt; as a child of an &lt;li&gt;:</p>
+      <ul>
+        <li>Fruits
+          <ul>
+            <li>Citrus
+              <ul>
+                <li>Orange</li>
+                <li>Lemon</li>
+              </ul>
+            </li>
+            <li>Berries
+              <ul>
+                <li>Strawberry</li>
+                <li>Blueberry</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>Vegetables
+          <ul>
+            <li>Leafy
+              <ul>
+                <li>Spinach</li>
+                <li>Lettuce</li>
+              </ul>
+            </li>
+            <li>Root
+              <ul>
+                <li>Carrot</li>
+                <li>Beetroot</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <h3>1.2 Ordered List (nested)</h3>
+      <p>Ordered lists can be nested too; the inner list can be ordered or unordered.</p>
+      <ol>
+        <li>Prepare ingredients
+          <ol>
+            <li>Measure</li>
+            <li>Wash</li>
+            <li>Chop</li>
+          </ol>
+        </li>
+        <li>Cook
+          <ol>
+            <li>Heat pan</li>
+            <li>Add ingredients</li>
+            <li>Simmer</li>
+          </ol>
+        </li>
+      </ol>
+
+      <h3>1.3 Mixed nesting (ul inside ol and vice-versa)</h3>
+      <p>Use the mix that best expresses your content structure.</p>
+      <ol>
+        <li>Project tasks
+          <ul>
+            <li>Design
+              <ol>
+                <li>Wireframe</li>
+                <li>Prototype</li>
+              </ol>
+            </li>
+            <li>Development
+              <ul>
+                <li>Frontend</li>
+                <li>Backend</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ol>
+
+      <h3>1.4 Description List (&lt;dl&gt;)</h3>
+      <p>Use &lt;dl&gt; for pairs like term → description (good for glossaries).</p>
+      <dl>
+        <dt>HTML</dt>
+        <dd>HyperText Markup Language — the structure of web pages.</dd>
+        <dt>CSS</dt>
+        <dd>Cascading Style Sheets — used for presentation (styles).</dd>
+        <dt>JavaScript</dt>
+        <dd>Programming language for interactivity in web pages.</dd>
+      </dl>
+
+      <h3>1.5 Common accessibility tip for lists</h3>
+      <p>Keep list items short and use proper nesting: the child list must be inside an &lt;li&gt; element.</p>
+    </section>
+
+    <hr>
+
+  
+    <section>
+      <h2>2. Tables — Structure & Examples</h2>
+      <p>Tables present tabular data. Use <code>&lt;caption&gt;</code>, <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code> and <code>&lt;tfoot&gt;</code> for structure and accessibility. Use <code>scope</code> for header cells to help screen readers.</p>
+
+      <h3>2.1 Simple table with thead / tbody / tfoot</h3>
+      <table border="1" cellpadding="6" cellspacing="0">
+        <caption><strong>Monthly Sales (Example)</strong></caption>
+        <thead>
+          <tr>
+            <th scope="col">Month</th>
+            <th scope="col">Product A</th>
+            <th scope="col">Product B</th>
+            <th scope="col">Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">January</th>
+            <td>120</td>
+            <td>80</td>
+            <td>200</td>
+          </tr>
+          <tr>
+            <th scope="row">February</th>
+            <td>150</td>
+            <td>90</td>
+            <td>240</td>
+          </tr>
+          <tr>
+            <th scope="row">March</th>
+            <td>170</td>
+            <td>110</td>
+            <td>280</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="3">Quarter Total</td>
+            <td>720</td>
+          </tr>
+        </tfoot>
+      </table>
+
+      <h3>2.2 Table using <code>colspan</code> and <code>rowspan</code></h3>
+      <p><code>colspan</code> merges cells horizontally; <code>rowspan</code> merges vertically.</p>
+      <table border="1" cellpadding="6" cellspacing="0">
+        <caption><strong>School Timetable (Example)</strong></caption>
+        <thead>
+          <tr>
+            <th scope="col">Time</th>
+            <th scope="col">Monday</th>
+            <th scope="col">Tuesday</th>
+            <th scope="col">Wednesday</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">9:00 - 10:00</th>
+            <td>Math</td>
+            <td>Science</td>
+            <td rowspan="2">Assembly (9:00-11:00)</td>
+          </tr>
+          <tr>
+            <th scope="row">10:00 - 11:00</th>
+            <td>English</td>
+            <td>History</td>
+           
+          </tr>
+          <tr>
+            <th scope="row">11:00 - 12:00</th>
+           
+            <td colspan="2">Computer Lab (11:00-12:00)</td>
+            <td>Art</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>2.3 Nested table (table inside a cell)</h3>
+      <p>Sometimes it's useful to put a small table inside a cell to show grouped data.</p>
+      <table border="1" cellpadding="6" cellspacing="0">
+        <caption><strong>Team -> Members (Nested table example)</strong></caption>
+        <thead>
+          <tr>
+            <th scope="col">Team</th>
+            <th scope="col">Members</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Alpha</th>
+            <td>
+              
+              <table border="1" cellpadding="4" cellspacing="0">
+                <thead>
+                  <tr><th scope="col">Name</th><th scope="col">Role</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Aisha</td><td>Lead</td></tr>
+                  <tr><td>Ravi</td><td>Developer</td></tr>
+                  <tr><td>Sam</td><td>Tester</td></tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Beta</th>
+            <td>
+              <table border="1" cellpadding="4" cellspacing="0">
+                <thead>
+                  <tr><th scope="col">Name</th><th scope="col">Role</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Priya</td><td>Lead</td></tr>
+                  <tr><td>Arun</td><td>Developer</td></tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>2.4 Accessibility & semantics tips for tables</h3>
+      <ul>
+        <li>Use &lt;caption&gt; to describe the table briefly.</li>
+        <li>Use &lt;thead&gt;, &lt;tbody&gt;, &lt;tfoot&gt; to group rows logically.</li>
+        <li>Use &lt;th scope="col"&gt; for column headers and &lt;th scope="row"&gt; for row headers to help screen readers.</li>
+        <li>Prefer not to use tables for layout; use them for tabular data only.</li>
+      </ul>
+    </section>
+
+    <hr>
+
+    
+    <section>
+      <h2>3. Practical combined example: Product Catalog</h2>
+      <p>This example shows a table with bullet lists inside some cells (lists can be placed inside &lt;td&gt;).</p>
+
+      <table border="1" cellpadding="6" cellspacing="0">
+        <caption><strong>Product Catalog</strong></caption>
+        <thead>
+          <tr>
+            <th scope="col">Product ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Features</th>
+            <th scope="col">Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">P-101</th>
+            <td>Smartphone X</td>
+            <td>
+              <ul>
+                <li>6.5&quot; display</li>
+                <li>128 GB storage</li>
+                <li>48 MP camera</li>
+              </ul>
+            </td>
+            <td>$299</td>
+          </tr>
+          <tr>
+            <th scope="row">P-102</th>
+            <td>Laptop Y</td>
+            <td>
+              <ol>
+                <li>Intel i5</li>
+                <li>8 GB RAM</li>
+                <li>512 GB SSD</li>
+              </ol>
+            </td>
+            <td>$699</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>4. Quick checklist before using lists & tables</h2>
+      <ul>
+        <li>Use lists for sequences or grouped items; use tables for data with rows & columns.</li>
+        <li>Keep nested lists readable — don't nest too deeply unless necessary.</li>
+        <li>Give tables captions and use semantic sections (&lt;thead&gt;, &lt;tbody&gt;, &lt;tfoot&gt;).</li>
+        <li>Remember accessibility attributes: <code>scope</code> on &lt;th&gt; and clear captions.</li>
+      </ul>
+    </section>
+  </main>
+
+
+  <footer>
+    <hr>
+    <p>Contact: <a href="www.linkedin.com/in/mustkim-siddiqui">LinkedIn</a> | <a href="https://github.com/MustkimSiddiqui07">GitHub</a></p>
+    <p>copyright © all rights reserved — Developer ( Mustkim Siddiqui )</p>
+  </footer>
+</body>
+</html>

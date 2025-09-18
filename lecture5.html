@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Lecture 5 — HTML Forms (Beginner to Advanced)</title>
+</head>
+<body>
+  <header>
+    <h1>LECTURE 5</h1>
+    <nav>
+      <a href="index.html">Home</a> |
+      <a href="lecture2.html">Lecture 2</a> |
+      <a href="lecture3.html">Lecture 3</a> |
+      <a href="lecture4.html">Lecture 4</a> |
+      <a href="lecture5.html">Lecture 5</a>
+      
+      <a href="lecture6.html">Lecture 6</a>
+    </nav>
+    <hr>
+  </header>
+
+  <main>
+    <h1>TOPIC: HTML Forms :-</h1>
+    <br>
+    <hr>
+
+    <h2>HTML Forms — Beginner to Advanced</h2>
+    
+  </header>
+
+  <hr>
+
+  
+  <section>
+    <h2>1. Basic Form Structure</h2>
+    <pre>
+&lt;form action="submit.php" method="post"&gt;
+  &lt;input type="text" name="username"&gt;
+  &lt;input type="submit" value="Submit"&gt;
+&lt;/form&gt;
+    </pre>
+  </section>
+
+ 
+  <section>
+    <h2>2. Common Input Types</h2>
+    <form>
+      <p>Text: <input type="text" name="username"></p>
+      <p>Password: <input type="password" name="pass"></p>
+      <p>Email: <input type="email" name="mail"></p>
+      <p>Number: <input type="number" name="age" min="1" max="100"></p>
+      <p>Submit: <input type="submit" value="Send"></p>
+      <p>Reset: <input type="reset" value="Clear"></p>
+    </form>
+  </section>
+
+  
+  <section>
+    <h2>3. Textarea, Select, Checkbox, Radio</h2>
+    <form>
+      <p>Textarea:</p>
+      <textarea name="message" rows="4" cols="40">Write here...</textarea>
+
+      <p>Select:</p>
+      <select name="country">
+        <option value="in">India</option>
+        <option value="us">USA</option>
+        <option value="uk">UK</option>
+      </select>
+
+      <p>Checkbox:</p>
+      <input type="checkbox" name="lang" value="html"> HTML
+      <input type="checkbox" name="lang" value="css"> CSS
+      <input type="checkbox" name="lang" value="js"> JavaScript
+
+      <p>Radio:</p>
+      <input type="radio" name="gender" value="male"> Male
+      <input type="radio" name="gender" value="female"> Female
+    </form>
+  </section>
+
+  
+  <section>
+    <h2>4. Fieldset and Legend</h2>
+    <form>
+      <fieldset>
+        <legend>Personal Info</legend>
+        Name: <input type="text" name="name"><br>
+        Age: <input type="number" name="age">
+      </fieldset>
+    </form>
+  </section>
+
+  
+  <section>
+    <h2>5. Labels & Accessibility</h2>
+    <form>
+      <label for="uname">Username:</label>
+      <input type="text" id="uname" name="uname">
+    </form>
+    <p><b>Note:</b> Clicking the label focuses the input field.</p>
+  </section>
+
+  
+  <section>
+    <h2>6. Form Attributes</h2>
+    <pre>
+&lt;form action="submit.php" method="get" target="_blank" autocomplete="on"&gt;
+  ...
+&lt;/form&gt;
+    </pre>
+    <ul>
+      <li><b>action</b> — URL where data is sent.</li>
+      <li><b>method</b> — GET or POST.</li>
+      <li><b>target</b> — _self, _blank (new tab).</li>
+      <li><b>autocomplete</b> — on/off.</li>
+    </ul>
+  </section>
+
+  
+  <section>
+    <h2>7. Advanced Input Types</h2>
+    <form>
+      Date: <input type="date" name="dob"><br><br>
+      Time: <input type="time" name="alarm"><br><br>
+      Range: <input type="range" name="vol" min="0" max="100"><br><br>
+      File: <input type="file" name="resume"><br><br>
+      Color: <input type="color" name="favcolor"><br><br>
+      URL: <input type="url" name="website"><br><br>
+      Search: <input type="search" name="query"><br><br>
+    </form>
+  </section>
+
+ 
+  <section>
+    <h2>8. Form Validation Attributes</h2>
+    <form>
+      Required: <input type="text" name="req" required><br><br>
+      Pattern (only 3 letters): 
+      <input type="text" name="pattern" pattern="[A-Za-z]{3}"><br><br>
+      Min/Max: <input type="number" name="num" min="5" max="10"><br><br>
+    </form>
+  </section>
+
+  
+  <section>
+    <h2>9. Complete Registration Form Example</h2>
+    <form action="submit.com" method="post">
+      <fieldset>
+        <legend>Registration</legend>
+
+        <label for="fname">Full Name:</label>
+        <input type="text" id="fname" name="fname" required><br><br>
+
+        <label for="mail">Email:</label>
+        <input type="email" id="mail" name="mail" required><br><br>
+
+        <label for="pwd">Password:</label>
+        <input type="password" id="pwd" name="pwd" required><br><br>
+
+        Gender:
+        <input type="radio" name="gender" value="male"> Male
+        <input type="radio" name="gender" value="female"> Female <br><br>
+
+        Skills:
+        <input type="checkbox" name="skill" value="html"> HTML
+        <input type="checkbox" name="skill" value="css"> CSS
+        <input type="checkbox" name="skill" value="js"> JavaScript <br><br>
+
+        Country:
+        <select name="country">
+          <option>India</option>
+          <option>USA</option>
+          <option>UK</option>
+        </select><br><br>
+
+        Upload File: <input type="file" name="resume"><br><br>
+
+        <input type="submit" value="Register">
+        <input type="reset" value="Clear">
+      </fieldset>
+    </form>
+  </section>
+
+  <footer>
+    <hr>
+    <p>Contact: <a href="www.linkedin.com/in/mustkim-siddiqui">LinkedIn</a></p>
+    <p>Copyright © all rights reserved — Developer ( Mustkim Siddiqui )</p>
+  </footer>
+</body>
+</html>
+
+
